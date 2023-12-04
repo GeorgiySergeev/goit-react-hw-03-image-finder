@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { Container } from './App.styled';
 import { SearchBar } from 'components/Searchbar/Searchbar';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
+import { HeadTitle } from 'components/Title/Title';
 
 export class App extends Component {
   state = {
@@ -18,6 +19,7 @@ export class App extends Component {
     return (
       <Container>
         <SearchBar onSubmit={this.handleQueryChange}></SearchBar>
+        {!this.state.query && <HeadTitle>PIXABY IMAGE SEARCH</HeadTitle>}
         <ImageGallery query={this.state.query}></ImageGallery>
         <ToastContainer autoClose={2000} />
       </Container>

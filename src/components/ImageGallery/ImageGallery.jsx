@@ -61,10 +61,10 @@ export class ImageGallery extends Component {
     return (
       <>
         <Gallery>
-          {images.map(({ id, webformatURL, largeImageURL }) => {
+          {images.map(({ id, webformatURL, largeImageURL }, index) => {
             return (
               <ImageGalleryItem
-                key={id}
+                key={index}
                 showModal={this.openModal}
                 image={webformatURL}
                 largeImage={largeImageURL}

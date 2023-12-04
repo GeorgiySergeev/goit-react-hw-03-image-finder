@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 import { Component } from 'react';
 
-import { Overlay, MolalForm } from './Modal.styled';
+import { Overlay, MolalForm, Image } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
@@ -33,7 +33,11 @@ export class Modal extends Component {
       <Overlay id="overlay" onClick={this.handleBackDropClick}>
         <MolalForm>
           {this.props.children}
-          <img src={this.props.modalImage} alt="" />
+          <Image
+            style={{ maxWidth: '640' }}
+            src={this.props.modalImage}
+            alt=""
+          />
         </MolalForm>
       </Overlay>,
       modalRoot
