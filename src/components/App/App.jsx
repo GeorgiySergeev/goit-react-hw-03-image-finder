@@ -5,6 +5,7 @@ import { Container } from './App.styled';
 import { SearchBar } from 'components/Searchbar/Searchbar';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { HeadTitle } from 'components/Title/Title';
+import { Footer } from 'components/Footer/Footer';
 
 export class App extends Component {
   state = {
@@ -21,6 +22,7 @@ export class App extends Component {
         <SearchBar onSubmit={this.handleQueryChange}></SearchBar>
         {!this.state.query && <HeadTitle>PIXABY IMAGE SEARCH</HeadTitle>}
         <ImageGallery query={this.state.query}></ImageGallery>
+        <Footer></Footer>
         <ToastContainer autoClose={2000} />
       </Container>
     );
