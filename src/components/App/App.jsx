@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+
 import { ToastContainer } from 'react-toastify';
 import { Container } from './App.styled';
-import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { SearchBar } from 'components/Searchbar/Searchbar';
+import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 
 export class App extends Component {
   state = {

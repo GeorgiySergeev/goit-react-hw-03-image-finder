@@ -1,7 +1,7 @@
-import { Overlay, MolalForm } from './Modal.styled';
 import { createPortal } from 'react-dom';
-// import icon from '../../logo512.png';
 import { Component } from 'react';
+
+import { Overlay, MolalForm } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
@@ -9,6 +9,7 @@ export class Modal extends Component {
   state = {
     showModal: true,
   };
+
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown);
   }
@@ -16,6 +17,7 @@ export class Modal extends Component {
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
+
   handleKeyDown = e => {
     if (e.code === 'Escape') {
       this.props.closeModal();
@@ -27,7 +29,6 @@ export class Modal extends Component {
   };
 
   render() {
-    console.log(this.props);
     return createPortal(
       <Overlay id="overlay" onClick={this.handleBackDropClick}>
         <MolalForm>

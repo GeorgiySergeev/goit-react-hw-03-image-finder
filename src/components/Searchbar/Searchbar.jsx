@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
+import { FiSearch } from 'react-icons/fi';
 
 import {
   Searchbar,
@@ -8,8 +10,6 @@ import {
   SearchFormButton,
   SearchFormInput,
 } from './Searchbar.styled';
-
-import { FiSearch } from 'react-icons/fi';
 
 export class SearchBar extends PureComponent {
   state = {
@@ -45,7 +45,7 @@ export class SearchBar extends PureComponent {
             value={this.state.query}
             autoComplete="off"
             autoFocus
-            placeholder="Search images and photos"
+            placeholder="Search images and photos..."
             onChange={this.handleChangeInput}
           />
         </SearchForm>
