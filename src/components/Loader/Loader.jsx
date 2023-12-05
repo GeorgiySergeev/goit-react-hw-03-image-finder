@@ -4,7 +4,7 @@ import { LoaderWrapper } from './Loader.styled';
 export const LoadingSpinner = () => {
   return (
     <LoaderWrapper>
-      <Circles />;
+      <Circles />
     </LoaderWrapper>
   );
 };

@@ -1,10 +1,10 @@
 import { GalleryItem, ImageGalleryItemImage } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = ({ showModal, image, largeImage }) => {
+export const ImageGalleryItem = ({ openModal, image, largeImage }) => {
   return (
     <GalleryItem
       onClick={e => {
-        showModal(largeImage);
+        openModal(largeImage);
       }}
     >
       <ImageGalleryItemImage src={image} alt="" />

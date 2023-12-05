@@ -13,22 +13,22 @@ import {
 
 export class SearchBar extends PureComponent {
   state = {
-    query: '',
+    localQuery: '',
   };
 
   handleSubmit = e => {
     e.preventDefault();
 
-    if (this.state.query.trim() === '') {
+    if (this.state.localQuery.trim() === '') {
       return toast('Please enter a valid search term');
     }
-    this.props.onSubmit(this.state.query);
-    this.setState({ query: '' });
+    this.props.onSubmit(this.state.localQuery);
+    this.setState({ localQuery: '' });
   };
 
   handleChangeInput = e => {
     const newQuery = e.target.value;
-    this.setState({ query: newQuery });
+    this.setState({ localQuery: newQuery });
   };
 
   render() {
@@ -42,7 +42,7 @@ export class SearchBar extends PureComponent {
           <SearchFormInput
             type="text"
             name="search"
-            value={this.state.query}
+            value={this.state.localQuery}
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos..."

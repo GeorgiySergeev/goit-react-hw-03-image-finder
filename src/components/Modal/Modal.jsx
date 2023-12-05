@@ -33,11 +33,7 @@ export class Modal extends Component {
       <Overlay id="overlay" onClick={this.handleBackDropClick}>
         <MolalForm>
           {this.props.children}
-          <Image
-            style={{ maxWidth: '640' }}
-            src={this.props.modalImage}
-            alt=""
-          />
+          <Image src={this.props.bigImage} alt="" />
         </MolalForm>
       </Overlay>,
       modalRoot
