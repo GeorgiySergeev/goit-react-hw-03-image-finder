@@ -2,9 +2,9 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
-  margin-bottom: 160px;
+  /* height: 100%; */
+  /* margin-bottom: 160px; */
   /* padding: 0px 30px; */
   /* overflow: hidden;  */
 }
