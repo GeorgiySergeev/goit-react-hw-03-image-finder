@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Container } from './App.styled';
-import { ImageGallery } from 'components/ImageGallery/ImageGallery';
-import { Button } from 'components/Button/Button';
-import { SearchBar } from 'components/Searchbar/Searchbar';
-import { Modal } from 'components/Modal/Modal';
-import { fatchHits } from '../../helpers/api-servise';
-import { ToastContainer } from 'react-toastify';
 import { noImageFound, imagesFound } from 'helpers/notification';
+import { ToastContainer } from 'react-toastify';
 import { LoadingSpinner } from 'components/Loader/Loader';
-
+import { ImageGallery } from 'components/ImageGallery/ImageGallery';
+import { SearchBar } from 'components/Searchbar/Searchbar';
+import { Container } from './App.styled';
+import { fatchHits } from '../../helpers/api-servise';
 import { HeadTitle } from 'components/Title/Title';
+import { Button } from 'components/Button/Button';
 import { Footer } from 'components/Footer/Footer';
+import { Modal } from 'components/Modal/Modal';
 
 export class App extends Component {
   state = {
